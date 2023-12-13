@@ -138,3 +138,37 @@ $(window).on('scroll', function() {
     // Back To Top Appear
     wScroll > 700 ? $('#back-to-top').fadeIn() : $('#back-to-top').fadeOut();
 });
+
+///////////////////////////
+// reviews more
+const reviewElements = document.querySelectorAll('.review__text');
+
+reviewElements.forEach(element => {
+    const text = element.textContent.trim();
+    let originalText = text;
+
+    if (text.length > 100) {
+        const shortenedText = text.slice(0, 100) + '...';
+        element.textContent = shortenedText;
+
+        const moreButton = element.nextElementSibling;
+
+        const toggleButtonText = () => {
+            if (moreButton.textContent === 'MORE') {
+                moreButton.textContent = 'HIDE';
+            } else {
+                moreButton.textContent = 'MORE';
+            }
+        };
+
+        moreButton.addEventListener('click', () => {
+            if (element.textContent === shortenedText) {
+                element.textContent = originalText;
+                toggleButtonText();
+            } else {
+                element.textContent = shortenedText;
+                toggleButtonText();
+            }
+        });
+    }
+});

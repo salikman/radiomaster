@@ -1,0 +1,53 @@
+.modal-content {
+  max-width: 300px;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      span {
+        flex: 1;
+        color: black;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      &.social {
+        margin: 0 auto;
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          border-radius: 4px;
+
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+
+          &:nth-child(1) {
+            background-color: #3f729b;
+            border-color: #3f729b;
+          }
+          &:nth-child(2) {
+            background-color: #77e878;
+            border-color: #77e878;
+          }
+        }
+      }
+    }
+  }
+}

@@ -12,7 +12,8 @@ body {
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
-     line-height: 1.2
+     line-height: 1.2;
+    transition: all .3s ease;
 }
 
 // font
@@ -24,7 +25,8 @@ body {
 }
 
 main {
-    flex: 1
+    flex: 1;
+    transition: all .3s ease;
 }
 
 h1,h2,h3,h4,h5,h6,ul,ol,p {
