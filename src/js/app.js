@@ -108,8 +108,19 @@ $(document).ready(function(){
 $(".header__menu > ul > li > a[href^='#']").on('click', function(e) {
     e.preventDefault();
     var hash = this.hash;
+    var offset = $(window).width() >= 992 ? 165 : 66;
+
     $('html, body').animate({
-        scrollTop: $(this.hash).offset().top
+        scrollTop: $(this.hash).offset().top - offset
+    }, 600);
+});
+$(".footer__menu nav a[href^='#']").on('click', function(e) {
+    e.preventDefault();
+    var hash = this.hash;
+    var offset = $(window).width() >= 992 ? 165 : 66;
+
+    $('html, body').animate({
+        scrollTop: $(this.hash).offset().top - offset
     }, 600);
 });
 
